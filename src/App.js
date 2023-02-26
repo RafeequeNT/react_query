@@ -11,6 +11,7 @@ import { RQFriendsPage } from "./components/RQFriendsPage";
 import { RQSuperHeroDetailPage } from "./components/RQSuperHeroDetailPage";
 import { DynamicParallelPage } from "./components/DynamicParallelPage";
 import { DependentQueriesPage } from "./components/DependentQueries";
+import { PaginatedQueriesPage } from "./components/paginatedQueries";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -62,6 +63,7 @@ const App = () => {
           path="/rq-dependent"
           element={<DependentQueriesPage email="vishwas@example.com" />}
         />
+        <Route path="/paginated-queries" element={<PaginatedQueriesPage />} />
 
         <Route path="/friends" element={<RQFriendsPage />} />
       </Routes>
