@@ -8,6 +8,8 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { NavLink } from "react-router-dom";
 import { RQFriendsPage } from "./components/RQFriendsPage";
+import { RQSuperHeroDetailPage } from "./components/RQSuperHeroDetailPage";
+import { DynamicParallelPage } from "./components/DynamicParallelPage";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -50,6 +52,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/superHeroes" element={<RQSuperHeroesPage />} />
+        <Route path="/superHeroes/:id" element={<RQSuperHeroDetailPage />} />
+        <Route
+          path="/dynamic-parallel"
+          element={<DynamicParallelPage heroIds={[1, 3]} />}
+        />
         <Route path="/friends" element={<RQFriendsPage />} />
       </Routes>
 
