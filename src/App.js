@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 import { RQFriendsPage } from "./components/RQFriendsPage";
 import { RQSuperHeroDetailPage } from "./components/RQSuperHeroDetailPage";
 import { DynamicParallelPage } from "./components/DynamicParallelPage";
+import { DependentQueriesPage } from "./components/DependentQueries";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -57,6 +58,11 @@ const App = () => {
           path="/dynamic-parallel"
           element={<DynamicParallelPage heroIds={[1, 3]} />}
         />
+        <Route
+          path="/rq-dependent"
+          element={<DependentQueriesPage email="vishwas@example.com" />}
+        />
+
         <Route path="/friends" element={<RQFriendsPage />} />
       </Routes>
 

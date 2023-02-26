@@ -16,8 +16,6 @@ export const DynamicParallelPage = ({ heroIds }) => {
     })
   );
 
-  console.log("querieResults", querieResults);
-
   return (
     <>
       {" "}
