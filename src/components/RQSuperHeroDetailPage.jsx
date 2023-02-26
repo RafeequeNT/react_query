@@ -18,7 +18,7 @@ export const RQSuperHeroDetailPage = () => {
     isEnabled: true,
   };
 
-  const { isLoading, data, isError } = UseSuperHeroDetail(
+  const { isLoading, data, isError, isFetching } = UseSuperHeroDetail(
     useHeroObject,
     heroId
   );
@@ -42,9 +42,9 @@ export const RQSuperHeroDetailPage = () => {
       >
         <h3> RQSuperHeroDetailPage</h3>
 
-        <div>{data?.name}</div>
+        <div>{data?.data?.name}</div>
 
-        <div>{data.alterEgo}</div>
+        <div>{data?.data?.alterEgo}</div>
       </div>
     </div>
   );
